@@ -10,16 +10,53 @@ export function SettingsTabs() {
   return (
     <Tabs.Root value={currentTab} onValueChange={setCurrentTab}>
       <Tabs.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
-        <TabItem value="my-details" title="My Details" />
-        <TabItem value="profile" title="Profile" />
-        <TabItem value="password" title="Password" />
-        <TabItem value="team" title="Team" />
-        <TabItem value="Plan" title="Plan" />
-        <TabItem value="billing" title="Billing" />
-        <TabItem value="email" title="Email" />
-        <TabItem value="notifications" title="Notifications" />
-        <TabItem value="integrations" title="Integrations" />
-        <TabItem value="api" title="API" />
+        <TabItem
+          value="my-details"
+          title="My Details"
+          isSelected={currentTab === 'my-details'}
+        />
+
+        <TabItem
+          value="profile"
+          title="Profile"
+          isSelected={currentTab === 'profile'}
+        />
+
+        <TabItem
+          value="password"
+          title="Password"
+          isSelected={currentTab === 'password'}
+        />
+
+        <TabItem value="team" title="Team" isSelected={currentTab === 'team'} />
+
+        <TabItem value="plan" title="Plan" isSelected={currentTab === 'plan'} />
+
+        <TabItem
+          value="billing"
+          title="Billing"
+          isSelected={currentTab === 'billing'}
+        />
+
+        <TabItem
+          value="email"
+          title="Email"
+          isSelected={currentTab === 'email'}
+        />
+
+        <TabItem
+          value="notifications"
+          title="Notifications"
+          isSelected={currentTab === 'notifications'}
+        />
+
+        <TabItem
+          value="integrations"
+          title="Integrations"
+          isSelected={currentTab === 'integrations'}
+        />
+
+        <TabItem value="api" title="API" isSelected={currentTab === 'api'} />
       </Tabs.List>
     </Tabs.Root>
   )
